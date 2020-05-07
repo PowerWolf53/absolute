@@ -1,0 +1,15 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+
+body{
+  background-image: url("https://wallpaperaccess.com/full/672238.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+

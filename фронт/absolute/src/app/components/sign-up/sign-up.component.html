@@ -1,0 +1,50 @@
+<div class="sign-in-wrapper">
+  <div class="logo-wrapper"></div>
+  <div class="login-container">
+    <mat-form-field class="example-full-width">
+      <mat-label>Логин</mat-label>
+      <input  matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Пожалуйста введите валидный логин
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Введите <strong>логин</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+
+  <div class="password-container">
+    <mat-form-field class="example-full-width">
+      <mat-label>Пароль</mat-label>
+      <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="passwordFormControl.hasError('email') && !passwordFormControl.hasError('required')">
+        Пароль дожен содержать минимум 6 символов
+      </mat-error>
+      <mat-error *ngIf="passwordFormControl.hasError('required')">
+        Введите <strong>пароль</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="password-container">
+    <mat-form-field class="example-full-width">
+      <mat-label>Подтвердите пароль</mat-label>
+      <input type="password" matInput [formControl]="confirmPasswordFormControl" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="passwordFormControl.hasError('email') && !passwordFormControl.hasError('required')">
+        Пароль дожен содержать минимум 6 символов
+      </mat-error>
+      <mat-error *ngIf="passwordFormControl.hasError('required')">
+        Введите <strong>пароль</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" (click)="signUp()">Зарегистрироваться</button>
+  </div>
+
+  <div (click)="handleSignInClick()" class="sign-up-link">
+    Вход
+  </div>
+</div>
